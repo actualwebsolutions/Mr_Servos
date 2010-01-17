@@ -1,0 +1,18 @@
+
+<div id="barra-menu">
+	<div class="titulo-pagina"><%= @title %></div>
+	<div class="botoes"><%= link_to "Cancelar", ministerios_path %></div>
+</div>
+
+<div id="conteudo">
+<div class="acessibilidade"><%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %> <span>>></span> <%= link_to "Ministérios", ministerios_path %> <span>>></span> Cadastro de novo ministério</div>
+
+<div class="dicas">
+	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
+	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>
+	<div class="fundamento"> <%=h TextosBiblicos.all.rand().FUNDAMENTO%> </div>
+</div>
+
+<%= render :partial => 'form' %>
+
+</div>

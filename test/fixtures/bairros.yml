@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+
+two:
+  estado: MyString
+  cidade: MyString
+  bairro: MyString

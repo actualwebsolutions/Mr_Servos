@@ -1,0 +1,58 @@
+<p>
+  <b>Igreja:</b>
+  <%=h Igreja.find(@congregacoes.igreja_id).razao_social %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%=h @congregacoes.nome %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%=h @congregacoes.endereco %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%=h @congregacoes.estado %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%=h @congregacoes.cidade %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%=h @congregacoes.bairro %>
+</p>
+
+<p>
+  <b>Cep:</b>
+  <%=h @congregacoes.cep %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%=h @congregacoes.telefone %>
+</p>
+
+<p>
+  <b>Data fundacao:</b>
+  <%=h @congregacoes.data_fundacao %>
+</p>
+
+<p>
+  <b>Respcad:</b>
+  <%=h @congregacoes.respcad %>
+</p>
+
+<p>
+  <b>Respmod:</b>
+  <%=h @congregacoes.respmod %>
+</p>
+
+
+<%= link_to 'Edit', edit_congregaco_path(@congregacoes) %> |
+<%= link_to 'Back', congregacoes_path %>

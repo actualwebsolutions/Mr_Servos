@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cnpj: 1
+  razao_social: MyString
+  endereco: MyString
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+  cep: MyString
+  telefone: MyString
+  data_organizao: 2010-01-14
+  presbiterio: MyString
+  sinodo: MyString
+  logotipo: 
+  logotipo_relatiorios: 
+  respcad: MyString
+  respmod: MyString
+
+two:
+  cnpj: 1
+  razao_social: MyString
+  endereco: MyString
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+  cep: MyString
+  telefone: MyString
+  data_organizao: 2010-01-14
+  presbiterio: MyString
+  sinodo: MyString
+  logotipo: 
+  logotipo_relatiorios: 
+  respcad: MyString
+  respmod: MyString

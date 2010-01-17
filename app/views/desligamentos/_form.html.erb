@@ -1,0 +1,19 @@
+<% form_for(@desligamento) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </p>
+  <p>
+    <%= f.label :respcad %><br />
+    <%= f.text_field :respcad %>
+  </p>
+  <p>
+    <%= f.label :respmod %><br />
+    <%= f.text_field :respmod %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

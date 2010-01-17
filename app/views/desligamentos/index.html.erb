@@ -1,0 +1,45 @@
+
+<div id="barra-menu">
+	<div class="titulo-pagina"><%= image_tag "navegacao/seta2.png" %>&nbsp;<%= @title %></div>
+	<div class="botoes"><%= link_to "Novo Desligamento", new_desligamento_path %></div>
+</div>
+
+<div id="conteudo">
+<div class="acessibilidade"><%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %> <span>>></span> Desligamentos</div>
+
+<div class="dicas">
+	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
+	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>
+	<div class="fundamento"> <%=h TextosBiblicos.all.rand().FUNDAMENTO%> </div>
+</div>
+
+<table style="margin-top:10px; width:80%;">
+  <thead>
+	<tr>
+    <th>Descricao</th>
+    <th>Respcad</th>
+    <th colspan="2">Ações</th>
+  </tr>
+  </thead>
+  
+  <tfoot>
+		<tr>
+			<th scope="row">Total</th>
+			<td colspan="5" class="total_itens"><%= Desligamento.count()%> desligamento(s) cadastrados.  </td>
+		</tr>
+	</tfoot>
+	
+	<tbody>
+<% @desligamentos.each do |desligamento| %>
+  <% @contador += 1;%>
+  <tr <%= "class='odd'" if @contador.even? %>>
+    <td><%=h desligamento.descricao.upcase %></td>
+    <td><%=h desligamento.respcad.upcase %></td>
+    <td><%= link_to 'Editar', edit_desligamento_path(desligamento) %></td>
+    <td><%= link_to 'Deletar', desligamento, :confirm => 'Deseja excluir o item selecionado?', :method => :delete %></td>
+  </tr>
+<% end %>
+	</tbody>
+</table>
+
+</div>

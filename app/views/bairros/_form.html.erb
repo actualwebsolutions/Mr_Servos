@@ -1,0 +1,20 @@
+<% form_for(@bairro) do |f| %>
+  <%= f.error_messages %>
+  
+<p>
+  <%= f.label :estado %><br />
+  <%= f.text_field :estado %>
+</p>
+<p>
+  <%= f.label :cidade %><br />
+  <%= f.text_field :cidade %>
+</p>
+<p>
+  <%= f.label :bairro %><br />
+  <%= f.text_field :bairro %>
+</p>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

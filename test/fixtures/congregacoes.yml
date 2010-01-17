@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  codigo_igreja: 
+  nome: MyString
+  endereco: MyString
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+  cep: MyString
+  telefone: MyString
+  data_fundacao: 2010-01-14
+
+two:
+  codigo_igreja: 
+  nome: MyString
+  endereco: MyString
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+  cep: MyString
+  telefone: MyString
+  data_fundacao: 2010-01-14

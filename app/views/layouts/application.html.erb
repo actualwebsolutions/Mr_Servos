@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= @title %> / MR. SERVOS - 1ª IPI do Natal</title>
+  <%= stylesheet_link_tag 'principal' %>
+  <%= stylesheet_link_tag 'web20' %>
+  
+</head>
+<body>
+
+<div id="geral">
+<div class="menu-cima">
+	<div class="esquerda"><%= link_to "www.ipinatal.com.br", "http://www.ipinatal.com.br" %></div>
+	<div class="direita">Bem vindo, atendimento@actualwebsolutions.net | Suporte Técnico | Reportar Erro | Sair do Sistema</div>
+	
+</div>
+<div id="topo">
+  <div class="logomarca"><%=link_to image_tag ('logomarca.jpg'), :controller => 'dashboard', :action => 'index' %></div>
+  <div class="menu">
+  	<ul>
+  	  <li><%= link_to image_tag ('navegacao/cadastros.png') +   "<br/>Tabelas  ", :controller => "empresas", :action => "index" %></li>
+  	  <li><%= link_to image_tag ('navegacao/movimentos.png') +  "<br/>Cadastros ", :controller => "projetos", :action => "index" %></li>
+  	  <li><%= link_to image_tag ('navegacao/relatorios.png') +  "<br/>Relatórios ", :controller => "calendario", :action => "index" %></li>
+  	  <li><%= link_to image_tag ('navegacao/utilitarios.png') + "<br/>Utilitários", :controller => "tarefas", :action => "index" %></li>
+  	  <li><%= link_to image_tag ('navegacao/reflexoes2.png') +   "<br/>Reflexões  ", :controller => "tarefas", :action => "index" %></li>
+  	</ul>
+  </div>
+</div>
+
+<%= yield %>
+
+<div id="rodape">Copyright &copy; <%= Time.now.year %> - 1ª Igreja Presbiteriana Idependente do Natal - Todos os direitos reservados. <br/>
+	Realização: Ministério de Comunicação / Desenvolvimento: Allyson Barros <br/>
+	Versão: 1.0.2 - Ruby on Rails 2.3.5, MySQL 5.1.42
+</div>
+</div>
+</body>
+</html>

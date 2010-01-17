@@ -1,0 +1,51 @@
+<% form_for(@congregacoes) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+     <%= f.label :igreja_id, "Igreja" %><br />
+  	<%= f.select :igreja_id, Igreja.all.collect {|i| [i.razao_social, i.id] }  %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :endereco %><br />
+    <%= f.text_field :endereco %>
+  </p>
+  <p>
+    <%= f.label :estado %><br />
+    <%= f.text_field :estado %>
+  </p>
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade %>
+  </p>
+  <p>
+    <%= f.label :bairro %><br />
+    <%= f.select :bairro, Bairro.all.collect {|b| [b.bairro, b.bairro]}%>
+  </p>
+  <p>
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep %>
+  </p>
+  <p>
+    <%= f.label :telefone %><br />
+    <%= f.text_field :telefone %>
+  </p>
+  <p>
+    <%= f.label :data_fundacao %><br />
+    <%= f.date_select :data_fundacao %>
+  </p>
+  <p>
+    <%= f.label :respcad %><br />
+    <%= f.text_field :respcad %>
+  </p>
+  <p>
+    <%= f.label :respmod %><br />
+    <%= f.text_field :respmod %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

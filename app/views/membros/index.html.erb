@@ -1,0 +1,52 @@
+
+<div id="barra-menu">
+	<div class="titulo-pagina"><%= image_tag "navegacao/seta2.png" %>&nbsp;<%= @title %></div>
+	<div class="botoes"><%= link_to "Novo Membro", new_membro_path %></div>
+</div>
+
+<div id="conteudo">
+<div class="acessibilidade"><%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %> <span>>></span> Membros</div>
+
+<div class="dicas">
+	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
+	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>
+	<div class="fundamento"> <%=h TextosBiblicos.all.rand().FUNDAMENTO%> </div>
+</div>
+
+<table style="margin-top:10px; width:80%;">
+  <thead>
+	<tr>
+    <th>Congregacao</th>
+    <th>Nome</th>
+    <th>Apelido</th>
+    <th>Sexo</th>
+    <th>Endereco</th>
+    <th>Ações</th>
+  </tr>
+  </thead>
+  
+  <tfoot>
+		<tr>
+			<th scope="row">Total</th>
+			<td colspan="5" class="total_itens"><%= Membro.count()%> membro(s) cadastrados.  </td>
+		</tr>
+	</tfoot>
+  
+  <tbody>
+<% @membros.each do |membro| %>
+  <tr>
+    <td><%=h membro.congregacao %></td>
+    <td><%=h membro.nome %></td>
+    <td><%=h membro.apelido %></td>
+    <td><%=h membro.sexo %></td>
+    <td><%=h membro.endereco %></td>
+    
+    <td><%= link_to 'Detalhes', membro %></td>
+    <td><%= link_to 'Editar', edit_membro_path(membro) %></td>
+    <td><%= link_to 'Deletar', membro, :confirm => 'Deseja excluir o item selecionado?', :method => :delete %></td>
+  </tr>
+<% end %>
+	</tbody>
+</table>
+
+</div>

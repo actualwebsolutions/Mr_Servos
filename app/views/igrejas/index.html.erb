@@ -1,0 +1,48 @@
+<h1>Listing igrejas</h1>
+
+<table>
+  <tr>
+    <th>Cnpj</th>
+    <th>Razao social</th>
+    <th>Endereco</th>
+    <th>Estado</th>
+    <th>Cidade</th>
+    <th>Bairro</th>
+    <th>Cep</th>
+    <th>Telefone</th>
+    <th>Data organizao</th>
+    <th>Presbiterio</th>
+    <th>Sinodo</th>
+    <th>Logotipo</th>
+    <th>Logotipo relatiorios</th>
+    <th>Respcad</th>
+    <th>Respmod</th>
+  </tr>
+
+<% @igrejas.each do |igreja| %>
+  <tr>
+    <td><%=h igreja.cnpj %></td>
+    <td><%=h igreja.razao_social %></td>
+    <td><%=h igreja.endereco %></td>
+    <td><%=h igreja.estado %></td>
+    <td><%=h igreja.cidade %></td>
+    <td><%=h igreja.bairro %></td>
+    <td><%=h igreja.cep %></td>
+    <td><%=h igreja.telefone %></td>
+    <td><%=h igreja.data_organizao %></td>
+    <td><%=h igreja.presbiterio %></td>
+    <td><%=h igreja.sinodo %></td>
+    <td><%=h igreja.logotipo %></td>
+    <td><%=h igreja.logotipo_relatiorios %></td>
+    <td><%=h igreja.respcad %></td>
+    <td><%=h igreja.respmod %></td>
+    <td><%= link_to 'Show', igreja %></td>
+    <td><%= link_to 'Edit', edit_igreja_path(igreja) %></td>
+    <td><%= link_to 'Destroy', igreja, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New igreja', new_igreja_path %>

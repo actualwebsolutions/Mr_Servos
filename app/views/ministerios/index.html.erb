@@ -1,0 +1,46 @@
+<div id="barra-menu">
+	<div class="titulo-pagina"><%= image_tag "navegacao/seta2.png" %>&nbsp;<%= @title %></div>
+	<div class="botoes"><%= link_to "Novo Ministério", new_ministerio_path %></div>
+</div>
+
+<div id="conteudo">
+<div class="acessibilidade"><%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %> <span>>></span> Ministérios</div>
+
+<div class="dicas">
+	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
+	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>
+	<div class="fundamento"> <%=h TextosBiblicos.all.rand().FUNDAMENTO%> </div>
+</div>
+
+<table style="margin-top:10px; width:80%;">
+  <thead>
+  <tr>
+    <th>Igreja</th>
+    <th>Nome</th>
+    <th>Objetivo</th>
+    <th colspan="3">Ações</th>
+  </tr>
+
+	<tfoot>
+		<tr>
+			<th scope="row">Total</th>
+			<td colspan="5" class="total_itens"><%= Ministerios.count()%> ministério(s) cadastrados.  </td>
+		</tr>
+	</tfoot>
+	
+	<tbody>
+<% @ministerios.each do |ministerios| %>
+  <% @contador += 1;%>
+  <tr <%= "class='odd'" if @contador.even? %>>
+    <td><%=h Igreja.find(ministerios.igreja_id).razao_social %></td>
+    <td><%=h ministerios.nome %></td>
+    <td><%=h ministerios.objetivo %></td>
+    <td><%= link_to 'Detalhes', ministerios %></td>
+    <td><%= link_to 'Editar', edit_ministerio_path(ministerios) %></td>
+    <td><%= link_to 'Deletar', ministerios, :confirm => 'Deseja excluir o item selecionado?', :method => :delete %></td>
+  </tr>
+<% end %>
+	</tbody>
+</table>
+
+</div>

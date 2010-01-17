@@ -1,0 +1,205 @@
+<% form_for(@membro) do |f| %>
+  <%= f.error_messages %>
+  
+<div id="tabs" style="width:80%; float:left;">
+			<ul>
+				<li><a href="#tabs-1">Dados Pessoais</a></li>
+				<li><a href="#tabs-2">Second</a></li>
+				<li><a href="#tabs-3">Third</a></li>
+			</ul>
+			<div id="tabs-1">
+				<p>
+    <%= f.label :congregacao %><br />
+    <%= f.text_field :congregacao %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :apelido %><br />
+    <%= f.text_field :apelido %>
+  </p>
+  <p>
+    <%= f.label :sexo %><br />
+    <%= f.text_field :sexo %>
+  </p>
+  <p>
+    <%= f.label :endereco %><br />
+    <%= f.text_field :endereco %>
+  </p>
+  <p>
+    <%= f.label :estado %><br />
+    <%= f.text_field :estado %>
+  </p>
+  <p>
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade %>
+  </p>
+  <p>
+    <%= f.label :bairro %><br />
+    <%= f.text_field :bairro %>
+  </p>
+  <p>
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep %>
+  </p>
+  <p>
+    <%= f.label :telefone %><br />
+    <%= f.text_field :telefone %>
+  </p>
+  <p>
+    <%= f.label :data_nascimento %><br />
+    <%= f.date_select :data_nascimento %>
+  </p>
+  <p>
+    <%= f.label :naturalidade %><br />
+    <%= f.text_field :naturalidade %>
+  </p>
+  <p>
+    <%= f.label :rg %><br />
+    <%= f.text_field :rg %>
+  </p>
+  <p>
+    <%= f.label :cpf %><br />
+    <%= f.text_field :cpf %>
+  </p>
+  <p>
+    <%= f.label :nome_pai %><br />
+    <%= f.text_field :nome_pai %>
+  </p>
+  <p>
+    <%= f.label :nome_mae %><br />
+    <%= f.text_field :nome_mae %>
+  </p>
+  <p>
+    <%= f.label :estado_civil %><br />
+    <%= f.text_field :estado_civil %>
+  </p>
+  <p>
+    <%= f.label :conjuge %><br />
+    <%= f.text_field :conjuge %>
+  </p>
+  <p>
+    <%= f.label :conjuge_evangelico %><br />
+    <%= f.text_field :conjuge_evangelico %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :fotografia %><br />
+    <%= f.text_field :fotografia %>
+  </p>
+			</div>
+			<div id="tabs-2">
+				
+				<p>
+    <%= f.label :tempo_conversao %><br />
+    <%= f.text_field :tempo_conversao %>
+  </p>
+  <p>
+    <%= f.label :tipo_admissao %><br />
+    <%= f.text_field :tipo_admissao %>
+  </p>
+  <p>
+    <%= f.label :data_admissao %><br />
+    <%= f.date_select :data_admissao %>
+  </p>
+  <p>
+    <%= f.label :ata_admissao %><br />
+    <%= f.text_field :ata_admissao %>
+  </p>
+  <p>
+    <%= f.label :data_ata_admissao %><br />
+    <%= f.date_select :data_ata_admissao %>
+  </p>
+  <p>
+    <%= f.label :data_batismo %><br />
+    <%= f.date_select :data_batismo %>
+  </p>
+  <p>
+    <%= f.label :ata_batismo %><br />
+    <%= f.text_field :ata_batismo %>
+  </p>
+  <p>
+    <%= f.label :data_ata_batismo %><br />
+    <%= f.date_select :data_ata_batismo %>
+  </p>
+  <p>
+    <%= f.label :data_profissao %><br />
+    <%= f.date_select :data_profissao %>
+  </p>
+  <p>
+    <%= f.label :ata_profissao %><br />
+    <%= f.text_field :ata_profissao %>
+  </p>
+  <p>
+    <%= f.label :data_ata_profissao %><br />
+    <%= f.date_select :data_ata_profissao %>
+  </p>
+  <p>
+    <%= f.label :local_batismo %><br />
+    <%= f.text_field :local_batismo %>
+  </p>
+  <p>
+    <%= f.label :igreja_remanescente %><br />
+    <%= f.text_field :igreja_remanescente %>
+  </p>
+  <p>
+    <%= f.label :area_atuacao %><br />
+    <%= f.text_field :area_atuacao %>
+  </p>
+  <p>
+    <%= f.label :situacao %><br />
+    <%= f.text_field :situacao %>
+  </p>
+				
+			</div>
+			<div id="tabs-3">
+				
+				 <p>
+    <%= f.label :data_desligamento %><br />
+    <%= f.date_select :data_desligamento %>
+  </p>
+  <p>
+    <%= f.label :ata_desligamento %><br />
+    <%= f.text_field :ata_desligamento %>
+  </p>
+  <p>
+    <%= f.label :codigo_desligamento %><br />
+    <%= f.text_field :codigo_desligamento %>
+  </p>
+  <p>
+    <%= f.label :igreja_destinataria %><br />
+    <%= f.text_field :igreja_destinataria %>
+  </p>
+  <p>
+    <%= f.label :respcad %><br />
+    <%= f.text_field :respcad %>
+  </p>
+  <p>
+    <%= f.label :respmod %><br />
+    <%= f.text_field :respmod %>
+  </p>
+  <p>
+    <%= f.label :data_readmissao %><br />
+    <%= f.date_select :data_readmissao %>
+  </p>
+  <p>
+    <%= f.label :resp_readmissao %><br />
+    <%= f.text_field :resp_readmissao %>
+  </p>
+  <p>
+    <%= f.label :ata_readmissao %><br />
+    <%= f.text_field :ata_readmissao %>
+  </p>
+			</div>
+			
+			<p>
+    <%= f.submit 'Create' %>
+  </p>
+			
+		</div>
+<% end %>

@@ -1,0 +1,95 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  congregacao: 
+  nome: MyString
+  apelido: MyString
+  sexo: 1
+  endereco: MyString
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+  cep: 1
+  telefone: MyString
+  data_nascimento: 2010-01-17
+  naturalidade: MyString
+  rg: MyString
+  cpf: MyString
+  nome_pai: MyString
+  nome_mae: MyString
+  estado_civil: 1
+  conjuge: MyString
+  conjuge_evangelico: 1
+  email: MyString
+  fotografia: 
+  tempo_conversao: MyString
+  tipo_admissao: 1
+  data_admissao: 2010-01-17
+  ata_admissao: MyString
+  data_ata_admissao: 2010-01-17
+  data_batismo: 2010-01-17
+  ata_batismo: MyString
+  data_ata_batismo: 2010-01-17
+  data_profissao: 2010-01-17
+  ata_profissao: MyString
+  data_ata_profissao: 2010-01-17
+  local_batismo: MyString
+  igreja_remanescente: MyString
+  area_atuacao: MyString
+  situacao: 1
+  data_desligamento: 2010-01-17
+  ata_desligamento: MyString
+  codigo_desligamento: 1
+  igreja_destinataria: MyString
+  respcad: MyString
+  respmod: MyString
+  data_readmissao: 2010-01-17
+  resp_readmissao: MyString
+  ata_readmissao: MyString
+
+two:
+  congregacao: 
+  nome: MyString
+  apelido: MyString
+  sexo: 1
+  endereco: MyString
+  estado: MyString
+  cidade: MyString
+  bairro: MyString
+  cep: 1
+  telefone: MyString
+  data_nascimento: 2010-01-17
+  naturalidade: MyString
+  rg: MyString
+  cpf: MyString
+  nome_pai: MyString
+  nome_mae: MyString
+  estado_civil: 1
+  conjuge: MyString
+  conjuge_evangelico: 1
+  email: MyString
+  fotografia: 
+  tempo_conversao: MyString
+  tipo_admissao: 1
+  data_admissao: 2010-01-17
+  ata_admissao: MyString
+  data_ata_admissao: 2010-01-17
+  data_batismo: 2010-01-17
+  ata_batismo: MyString
+  data_ata_batismo: 2010-01-17
+  data_profissao: 2010-01-17
+  ata_profissao: MyString
+  data_ata_profissao: 2010-01-17
+  local_batismo: MyString
+  igreja_remanescente: MyString
+  area_atuacao: MyString
+  situacao: 1
+  data_desligamento: 2010-01-17
+  ata_desligamento: MyString
+  codigo_desligamento: 1
+  igreja_destinataria: MyString
+  respcad: MyString
+  respmod: MyString
+  data_readmissao: 2010-01-17
+  resp_readmissao: MyString
+  ata_readmissao: MyString

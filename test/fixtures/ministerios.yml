@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  congregacao: 
+  nome: MyString
+  objetivo: MyString
+  respcad: MyString
+  respmod: MyString
+
+two:
+  congregacao: 
+  nome: MyString
+  objetivo: MyString
+  respcad: MyString
+  respmod: MyString

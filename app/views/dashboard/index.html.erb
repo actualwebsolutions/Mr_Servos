@@ -1,0 +1,17 @@
+<div id="barra-menu">
+	<div class="titulo-pagina"><%= image_tag "navegacao/seta2.png" %>&nbsp;<%= @title %></div>
+	<div class="botoes"><%= link_to "Sair do Sistema"%></div>
+</div>
+
+<div id="conteudo">
+<div class="acessibilidade">Dashboard</div>
+
+<div class="dicas">
+	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
+	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>
+	<div class="fundamento"> <%=h TextosBiblicos.all.rand().FUNDAMENTO%> </div>
+</div>
+	
+	<%= image_tag "dashboard.jpg" %>
+
+</div>

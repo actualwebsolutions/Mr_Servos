@@ -1,0 +1,56 @@
+* {margin:0; padding:0;}
+body {background: #336688; font: 12px "Lucida Grande", Verdana, Verdana, Arial, Helvetica, sans-serif;	color: #333333; margin-top:10px;}
+a {color:#333; text-decoration:none;}
+img {border:none; vertical-align:middle;}
+.menu-cima {color:#fff; text-align:left; font-size:10px; font-weight:bold; padding:0 10px; overflow:hidden;}
+.menu-cima a {color:#fff; text-align:left; font-size:10px; font-weight:bold;}
+.menu-cima .esquerda {float:left;}
+.menu-cima .direita {float:right;}
+
+#geral {width:980px; margin:0 auto;}
+#geral #topo {height:52px; margin-top:10px; background: url(../images/bg-arredondado-cima.gif) no-repeat; padding:20px; overflow:hidden;}
+#geral #topo .logomarca {margin-top:-10px; float:left;}
+#geral #topo .menu {float:right;}
+#geral #topo .menu ul {list-style:none;}
+#geral #topo .menu ul li {display:inline;  float:left;  margin:0 5px; font-weight:bold;}
+#geral #topo .menu ul li a img {margin-bottom:5px;}
+#geral #topo .menu ul li a {display:block; text-align:center; padding:5px;}
+#geral #topo .menu ul li a:hover {background:#E5E5E5;}
+#geral #barra-menu {padding:10px; background:url(../images/bg-barra.gif) repeat-x scroll left center; height:16px; overflow:hidden; position:relative;}
+#geral #barra-menu .titulo-pagina {font-size:14px; font-weight:bold; color:#fff; float:left; margin-top:-8px;}
+#geral #barra-menu .botoes {float:right; background:#eee; border:1px solid #cecece; float:right; margin-top:-5px; margin-left:10px;}
+#geral #barra-menu .botoes a {display:block; padding:5px 10px;}
+#geral #conteudo {padding:10px 20px; background:#fff url(../images/bg-arredondado-baixo.gif) center bottom no-repeat; padding-bottom:20px; overflow:hidden;}
+
+#geral #conteudo .dicas {width:16%; float:right; margin:0 10px;}
+#geral #conteudo .dicas .titulo-dicas {font-size:14px; margin-bottom:6px; padding-bottom:6px; border-bottom:1px dashed #ccc;}
+#geral #conteudo .dicas p {padding:0 5px; font-size:10px; line-height:160%;}
+#geral #conteudo .dicas .fundamento {font-size:10px; text-align:right; margin-top:5px; font-weight:bold; color:#AAA;}
+
+#geral #conteudo .acessibilidade {font-size:10px; color:#999; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid #dfdfdf;}
+#geral #conteudo .acessibilidade a:hover {text-decoration:underline;}
+#geral #conteudo .acessibilidade span {color:#333; margin:0 5px;}
+
+#geral #conteudo .mensagem {background: url(../images/bg-mensagem.gif) right 1px no-repeat; height:31px; margin:10px 0 20px 0; cursor:pointer;}
+#geral #conteudo .mensagem p {background: url(../images/icon-sucesso.gif) left center no-repeat; padding:8px 60px;}
+
+#geral #conteudo .lista-item {margin-top:5px;}
+#geral #conteudo .lista-item ul, #geral #conteudo .lista-usuarios ul, #geral #conteudo .lista-projetos ul {list-style:none;}
+#geral #conteudo .lista-item ul li {font-size:12px; margin-bottom:10px; padding-bottom:10px;  border-bottom:1px dotted #dfdfdf;}
+#geral #conteudo .lista-item ul li a {color:#666;}
+#geral #conteudo .lista-item ul li a:hover {text-decoration:underline;}
+#geral #conteudo .lista-item ul li img {vertical-align:middle; margin-right:10px;}
+#geral #conteudo .lista-item ul li span {font-size:10px;}
+
+#geral #rodape {margin-top:10px; text-align:center; color:#fff; font-weight:bold; font-size:10px; padding-bottom:30px; text-shadow: 0.1em 0.1em #555; line-height:150%;}
+
+.titulo-form, .titulo-usuarios, .titulo-projetos, .titulo-tarefas {font-size:14px; font-weight:bold; margin-bottom:20px;}
+.titulo-usuarios, .titulo-projetos {margin-top:30px; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid #cecece;}
+form label {font-weight:bold; font-size:11px;}
+form input[type="text"], form input[type="password"] {margin:5px 0; padding:2px; border:1px solid #dfdfdf; width:340px;}
+form select {margin:5px 0; padding:2px; border:1px solid #dfdfdf; width:130px;}
+form textarea {margin:5px 0; padding:2px; border:1px solid #dfdfdf; width:500px; height:200px;}
+form label .requerido {font-size:16px; font-weight:bold; color:red;}
+form hr {margin:10px 0; height:1px; border:none; border-bottom:1px dotted #dfdfdf;}
+
+#info-empresa p, #info-projeto p, #info-usuario p {margin-bottom:10px; padding-bottom:5px; border-bottom:1px dotted #dfdfdf;}

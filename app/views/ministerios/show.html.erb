@@ -1,0 +1,28 @@
+<p>
+  <b>Igreja:</b>
+  <%=h Igreja.find(@ministerios.igreja_id).razao_social %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%=h @ministerios.nome %>
+</p>
+
+<p>
+  <b>Objetivo:</b>
+  <%=h @ministerios.objetivo %>
+</p>
+
+<p>
+  <b>Respcad:</b>
+  <%=h @ministerios.respcad %>
+</p>
+
+<p>
+  <b>Respmod:</b>
+  <%=h @ministerios.respmod %>
+</p>
+
+
+<%= link_to 'Edit', edit_ministerio_path(@ministerios) %> |
+<%= link_to 'Back', ministerios_path %>

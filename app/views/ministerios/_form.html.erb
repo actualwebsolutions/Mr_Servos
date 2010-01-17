@@ -1,0 +1,19 @@
+<% form_for(@ministerios) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :igreja_id %><br />
+    <%= f.select :igreja_id, Igreja.all.collect {|c| [c.razao_social, c.id]} %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :objetivo %><br />
+    <%= f.text_area :objetivo %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
