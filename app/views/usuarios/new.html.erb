@@ -1,0 +1,26 @@
+<div id="barra-menu">
+	<div class="titulo-pagina"><%= @title %></div>
+	<div class="botoes"><%= link_to "Cancelar", ministerios_path %></div>
+</div>
+
+<div id="conteudo">
+<div class="acessibilidade"><%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %> <span>>></span> <%= link_to "Usuários", usuarios_path %> <span>>></span> Cadastro de novo usuário</div>
+
+<%= error_messages_for :usuarios %>
+<% form_for :usuarios, :url => usuarios_path do |f| -%>
+<p><label for="login">Login</label><br/>
+<%= f.text_field :login %></p>
+
+<p><label for="email">Email</label><br/>
+<%= f.text_field :email %></p>
+
+<p><label for="password">Password</label><br/>
+<%= f.password_field :password %></p>
+
+<p><label for="password_confirmation">Confirm Password</label><br/>
+<%= f.password_field :password_confirmation %></p>
+
+<p><%= submit_tag 'Sign up' %></p>
+<% end -%>
+
+</div>

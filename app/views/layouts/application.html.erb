@@ -14,7 +14,7 @@
 <div id="geral">
 <div class="menu-cima">
 	<div class="esquerda"><%= link_to "www.ipinatal.com.br", "http://www.ipinatal.com.br" %></div>
-	<div class="direita">Bem vindo, atendimento@actualwebsolutions.net | Suporte Técnico | Reportar Erro | Sair do Sistema</div>
+	<div class="direita">Bem vindo, <%= self.current_usuarios.login.upcase %> | Suporte Técnico | Reportar Erro | <%= link_to "Sair do Sistema ", logout_path %></div>
 	
 </div>
 <div id="topo">

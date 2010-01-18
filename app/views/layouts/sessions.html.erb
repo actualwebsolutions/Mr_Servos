@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title><%= @title %> / MR. SERVOS - 1ª IPI do Natal</title>
+  <%= stylesheet_link_tag 'principal' %>
+  <%= stylesheet_link_tag 'login' %>
+  <%= stylesheet_link_tag 'ui-theme' %>
+  
+</head>
+<body>
+
+<div id="geral">
+
+<div id="topo">
+  <div class="logomarca"><%=link_to image_tag ('logomarca.jpg'), "http://www.ipinatal.com.br" %></div>
+</div>
+<div id="conteudo">
+	<% unless flash[:notice].blank? %>
+	<div class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="margin-bottom: 20px; padding: 10px .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<%= flash[:notice] %></p>
+			</div>
+		</div>
+	<% end %>
+	
+	<% unless flash[:warning].blank? %>
+	<div class="ui-widget">
+			<div class="ui-state-error ui-corner-all" style="margin-bottom: 20px; padding: 10px .7em;"> 
+				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+				<strong>Atenção:</strong> <%= flash[:warning] %></p></p>
+			</div>
+		</div>
+	<% end %>
+	
+<%= yield %>
+</div>
+</div>
+
+<div id="rodape">Copyright &copy; <%= Time.now.year %> - 1ª Igreja Presbiteriana Idependente do Natal - Todos os direitos reservados. <br/>
+	Realização: Ministério de Comunicação / Desenvolvimento: Allyson Barros <br/>
+	Versão: 1.0.2 - Ruby on Rails 2.3.5, MySQL 5.1.42
+</div>
+</body>
+</html>
