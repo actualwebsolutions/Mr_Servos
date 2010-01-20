@@ -1,5 +1,7 @@
 class DashboardController < ApplicationController
-  def index
+  before_filter :login_required
+  
+	def index
   	@title = "INDICADORES"
   end
 

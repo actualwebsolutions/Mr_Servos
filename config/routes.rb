@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.signup '/signup', :controller => 'usuarios', :action => 'new'
+  map.login  '/login', :controller => 'sessions', :action => 'new'
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy' 
+
+	map.resources :usuarios
+
+  map.resource :session
+
   map.resources :membros
 
   map.resources :desligamentos

@@ -1,5 +1,4 @@
 <% form_for(@congregacoes) do |f| %>
-  <%= f.error_messages %>
 
   <p>
      <%= f.label :igreja_id, "Igreja" %><br />
@@ -36,14 +35,6 @@
   <p>
     <%= f.label :data_fundacao %><br />
     <%= f.date_select :data_fundacao %>
-  </p>
-  <p>
-    <%= f.label :respcad %><br />
-    <%= f.text_field :respcad %>
-  </p>
-  <p>
-    <%= f.label :respmod %><br />
-    <%= f.text_field :respmod %>
   </p>
   <p>
     <%= f.submit 'Create' %>

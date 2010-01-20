@@ -1,12 +1,13 @@
 <div id="barra-menu">
-	<div class="titulo-pagina"><%= @title %></div>
+	<div class="titulo-pagina"><%= image_tag "navegacao/seta2.png" %>&nbsp;<%= @title %></div>
 	<div class="botoes"><%= link_to "Cancelar", ministerios_path %></div>
 </div>
 
 <div id="conteudo">
 <div class="acessibilidade"><%= link_to "Dashboard", :controller => 'dashboard', :action => 'index' %> <span>>></span> <%= link_to "Usuários", usuarios_path %> <span>>></span> Cadastro de novo usuário</div>
 
-<%= error_messages_for :usuarios %>
+<%= render :partial => '/_partials_/avisos' %>
+
 <% form_for :usuarios, :url => usuarios_path do |f| -%>
 <p><label for="login">Login</label><br/>
 <%= f.text_field :login %></p>

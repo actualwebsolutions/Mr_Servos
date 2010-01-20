@@ -1,5 +1,7 @@
 class MinisteriosController < ApplicationController
-  # GET /ministerios
+  before_filter :login_required
+  
+	# GET /ministerios
   # GET /ministerios.xml
   def index
     @ministerios = Ministerios.all
@@ -46,8 +48,9 @@ class MinisteriosController < ApplicationController
     @title = "Cadastro de Ministério"
     respond_to do |format|
       if @ministerios.save
-        flash[:notice] = 'Ministerios was successfully created.'
-        format.html { redirect_to(@ministerios) }
+        Ministerios.update(@ministerios.id, :respcad => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Ministerios was successfully created.'
+        format.html { redirect_to(ministerios_path) }
         format.xml  { render :xml => @ministerios, :status => :created, :location => @ministerios }
       else
         format.html { render :action => "new" }
@@ -63,8 +66,9 @@ class MinisteriosController < ApplicationController
     @title = "Edição do Ministério: " + @ministerios.nome
     respond_to do |format|
       if @ministerios.update_attributes(params[:ministerios])
-        flash[:notice] = 'Ministerios was successfully updated.'
-        format.html { redirect_to(@ministerios) }
+        Ministerios.update(@ministerios.id, :respmod => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Ministerios was successfully updated.'
+        format.html { redirect_to(ministerios_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

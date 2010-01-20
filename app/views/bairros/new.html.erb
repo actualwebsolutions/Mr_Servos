@@ -7,12 +7,14 @@
 <div id="conteudo">
 <div class="acessibilidade"><%= link_to "Indicadores", :controller => 'dashboard', :action => 'index' %> <span>>></span> <%= link_to "Bairros", bairros_path %> <span>>></span> Novo Bairro</div>
 
+<%= render :partial => '/_partials_/avisos' %>
+
 <div class="dicas">
 	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
 	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>
 	<div class="fundamento"> <%=h TextosBiblicos.all.rand().FUNDAMENTO%> </div>
 </div>
 
-<%= render :partial => 'form' %>
+<%= render :partial => 'form'%>
 
 </div>

@@ -1,0 +1,7 @@
+#geral {width:380px; margin:80px auto 20px auto;}
+#geral #topo {height:70px; background: #fff url(../images/bg-login-cima.jpg) no-repeat; padding-bottom:10px; border-bottom:1px solid #F2F2F2; text-align:center;}
+#geral #topo .logomarca {width:100%; margin:0 auto;}
+#geral #conteudo {background:#fff url(../images/bg-login-baixo.jpg) center bottom no-repeat;}
+#rodape {width:980px; margin:0 auto; margin-top:10px; text-align:center; color:#fff; font-weight:bold; font-size:10px; padding-bottom:30px; text-shadow: 0.1em 0.1em #555; line-height:150%;}
+
+form input[type="text"], form input[type="password"] {margin:5px 0; padding:2px; border:1px solid #dfdfdf; width:330px;}

@@ -1,5 +1,6 @@
 class MembrosController < ApplicationController
-  # GET /membros
+  before_filter :login_required
+	# GET /membros
   # GET /membros.xml
   def index
     @membros = Membro.all
@@ -44,8 +45,9 @@ class MembrosController < ApplicationController
 
     respond_to do |format|
       if @membro.save
-        flash[:notice] = 'Membro was successfully created.'
-        format.html { redirect_to(@membro) }
+        Membro.update(@membro.id, :respcad => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Membro was successfully created.'
+        format.html { redirect_to(membros_path) }
         format.xml  { render :xml => @membro, :status => :created, :location => @membro }
       else
         format.html { render :action => "new" }
@@ -61,8 +63,9 @@ class MembrosController < ApplicationController
 
     respond_to do |format|
       if @membro.update_attributes(params[:membro])
-        flash[:notice] = 'Membro was successfully updated.'
-        format.html { redirect_to(@membro) }
+        Membro.update(@membro.id, :respmod => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Membro was successfully updated.'
+        format.html { redirect_to(membros_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

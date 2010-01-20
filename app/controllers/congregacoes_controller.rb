@@ -46,8 +46,9 @@ class CongregacoesController < ApplicationController
     @title = "Cadastro de Congregração"
     respond_to do |format|
       if @congregacoes.save
-        flash[:notice] = 'Congregacoes was successfully created.'
-        format.html { redirect_to(@congregacoes) }
+        Congregacoes.update(@congregacoes.id, :respcad => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Congregacoes was successfully created.'
+        format.html { redirect_to(congregacoes_path) }
         format.xml  { render :xml => @congregacoes, :status => :created, :location => @congregacoes }
       else
         format.html { render :action => "new" }
@@ -63,7 +64,8 @@ class CongregacoesController < ApplicationController
     @title = "Edição da Congregação: " + @congregacoes.nome
     respond_to do |format|
       if @congregacoes.update_attributes(params[:congregacoes])
-        flash[:notice] = 'Congregacoes was successfully updated.'
+        Congregacoes.update(@congregacoes.id, :respmod => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Congregacoes was successfully updated.'
         format.html { redirect_to(@congregacoes) }
         format.xml  { head :ok }
       else

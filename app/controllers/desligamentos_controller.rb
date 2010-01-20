@@ -1,5 +1,6 @@
 class DesligamentosController < ApplicationController
-  # GET /desligamentos
+  before_filter :login_required
+	# GET /desligamentos
   # GET /desligamentos.xml
   def index
     @desligamentos = Desligamento.all
@@ -26,7 +27,7 @@ class DesligamentosController < ApplicationController
   # GET /desligamentos/new.xml
   def new
     @desligamento = Desligamento.new
-    @title = "Cadastro de Desligamento"
+    @title = "DESLIGAMENTOS - INCLUSÃO"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @desligamento }
@@ -36,18 +37,19 @@ class DesligamentosController < ApplicationController
   # GET /desligamentos/1/edit
   def edit
     @desligamento = Desligamento.find(params[:id])
-    @title = "Edição do Desligamento: " + @desligamento.descricao
+    @title = "DESLIGAMENTOS - ALTERAÇÃO"
   end
 
   # POST /desligamentos
   # POST /desligamentos.xml
   def create
     @desligamento = Desligamento.new(params[:desligamento])
-    @title = "Cadastro de Desligamento"
+    @title = "DESLIGAMENTOS - INCLUSÃO"
     respond_to do |format|
       if @desligamento.save
-        flash[:notice] = 'Desligamento was successfully created.'
-        format.html { redirect_to(@desligamento) }
+        Desligamento.update(@desligamento.id, :respcad => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Desligamento was successfully created.'
+        format.html { redirect_to(desligamentos_path) }
         format.xml  { render :xml => @desligamento, :status => :created, :location => @desligamento }
       else
         format.html { render :action => "new" }
@@ -60,11 +62,12 @@ class DesligamentosController < ApplicationController
   # PUT /desligamentos/1.xml
   def update
     @desligamento = Desligamento.find(params[:id])
-    @title = "Edição do Desligamento: " + @desligamento.descricao
+    @title = "DESLIGAMENTOS - ALTERAÇÃO"
     respond_to do |format|
       if @desligamento.update_attributes(params[:desligamento])
-        flash[:notice] = 'Desligamento was successfully updated.'
-        format.html { redirect_to(@desligamento) }
+        Desligamento.update(@desligamento.id, :respmod => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Desligamento was successfully updated.'
+        format.html { redirect_to(desligamentos_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

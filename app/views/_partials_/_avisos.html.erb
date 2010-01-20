@@ -1,0 +1,17 @@
+<% unless flash[:notice].blank? %>
+	<div class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="margin-bottom: 20px; padding: 10px .7em;"> 
+				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<%= flash[:notice] %></p>
+			</div>
+		</div>
+	<% end %>
+	
+	<% unless flash[:warning].blank? %>
+	<div class="ui-widget">
+			<div class="ui-state-error ui-corner-all" style="margin-bottom: 20px; padding: 10px .7em;"> 
+				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+				<strong>Atenção:</strong> <%= flash[:warning] %></p></p>
+			</div>
+		</div>
+	<% end %>

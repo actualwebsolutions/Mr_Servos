@@ -7,6 +7,8 @@
 <div id="conteudo">
 <div class="acessibilidade"><%= link_to "Indicadores", :controller => 'dashboard', :action => 'index' %> <span>>></span> Bairros</div>
 
+	<%= render :partial => '/_partials_/avisos' %>
+
 <div class="dicas">
 	<div class="titulo-dicas"><%= image_tag "icon-idea.png", :alt => "ícone Dicas"%> Para Refletir</div>
 	<p><%=h TextosBiblicos.all.rand().TEXTO%></p>

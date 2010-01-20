@@ -50,8 +50,9 @@ class IgrejasController < ApplicationController
 
     respond_to do |format|
       if @igreja.save
-        flash[:notice] = 'Igreja was successfully created.'
-        format.html { redirect_to(@igreja) }
+        Igreja.update(@igreja.id, :respcad => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Igreja was successfully created.'
+        format.html { redirect_to(igrejas_path) }
         format.xml  { render :xml => @igreja, :status => :created, :location => @igreja }
       else
         format.html { render :action => "new" }
@@ -67,8 +68,9 @@ class IgrejasController < ApplicationController
 
     respond_to do |format|
       if @igreja.update_attributes(params[:igreja])
-        flash[:notice] = 'Igreja was successfully updated.'
-        format.html { redirect_to(@igreja) }
+        Igreja.update(@igreja.id, :respmod => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Igreja was successfully updated.'
+        format.html { redirect_to(igrejas_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

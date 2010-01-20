@@ -15,7 +15,7 @@ class BairrosController < ApplicationController
   # GET /bairros/1.xml
   def show
     @bairro = Bairro.find(params[:id])
-    @title = "Detalhes do Bairro: " + @bairro.bairro
+    @title = "BAIRROS - DETALHAMENTO"
     
     respond_to do |format|
       format.html # show.html.erb
@@ -27,7 +27,7 @@ class BairrosController < ApplicationController
   # GET /bairros/new.xml
   def new
     @bairro = Bairro.new
-    @title = "Cadastro de Bairro"
+    @title = "BAIRROS - INCLUSÃO"
     
     respond_to do |format|
       format.html # new.html.erb
@@ -38,19 +38,20 @@ class BairrosController < ApplicationController
   # GET /bairros/1/edit
   def edit
     @bairro = Bairro.find(params[:id])
-    @title = "Edição do Bairro: " + @bairro.bairro
+    @title = "BAIRROS - ALTERAÇÃO"
   end
 
   # POST /bairros
   # POST /bairros.xml
   def create
     @bairro = Bairro.new(params[:bairro])
-    @title = "Cadastro de Bairro"
+    @title = "BAIRROS - INCLUSÃO"
     
     respond_to do |format|
       if @bairro.save
-        flash[:notice] = 'Bairro was successfully created.'
-        format.html { redirect_to(@bairro) }
+        Bairro.update(@bairro.id, :respcad => self.current_usuarios.login.upcase)
+      	flash[:notice] = 'Bairro was successfully created.'
+        format.html { redirect_to(bairros_path) }
         format.xml  { render :xml => @bairro, :status => :created, :location => @bairro }
       else
         format.html { render :action => "new" }
@@ -63,10 +64,11 @@ class BairrosController < ApplicationController
   # PUT /bairros/1.xml
   def update
     @bairro = Bairro.find(params[:id])
-    @title = "Edição do Bairro: " + @bairro.bairro
+    @title = "BAIRROS - ALTERAÇÃO"
     
     respond_to do |format|
       if @bairro.update_attributes(params[:bairro])
+      	Bairro.update(@bairro.id, :respmod => self.current_usuarios.login.upcase)
         flash[:notice] = 'Bairro was successfully updated.'
         format.html { redirect_to(@bairro) }
         format.xml  { head :ok }
